@@ -168,10 +168,10 @@
   </a>
   <header class="w-full bg-white shadow">
     <div class=" w-full px-4 flex justify-end lg:justify-between items-center h-12 lg:h-24">
-      <!-- Logo -->
+     
 
   
-      <!-- Botón hamburguesa (móvil) -->
+      
       <button id="menu-btn" class="lg:hidden block text-green-700 focus:outline-none">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +179,7 @@
         </svg>
       </button>
   
-      <!-- Menú grande desktop con flex-wrap -->
+      
       <nav class="hidden lg:flex flex-wrap w-full justify-start gap-x-4 gap-y-2">
 
         <a href="#" class="py-2 px-3 text-sm font-semibold text-gray-900 hover:text-green-700">INICIO</a>
@@ -296,7 +296,7 @@
       
       </nav>
   
-      <!-- Menú mobile (hamburguesa) -->
+      
       <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-white shadow-md z-20">
         <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">INICIO</a>
         <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">LA UNIVERSIDAD</a>
@@ -315,12 +315,12 @@
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
   
-    // Mostrar/Ocultar menú al hacer clic en el botón
+    
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
   
-    // Cerrar menú al hacer clic en cualquier link del menú
+    
     const menuLinks = mobileMenu.querySelectorAll('a, summary');
     menuLinks.forEach(link => {
       link.addEventListener('click', () => {

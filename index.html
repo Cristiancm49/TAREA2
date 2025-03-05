@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Universidad de la Amazonia</title>
+  <link rel="icon" href="./img/Logo-u-amazonia.png" sizes="64x64" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .carousel-uniamazonia {
+      width: 100%;
+
+      overflow: hidden;
+      position: relative;
+    }
+
+
+    .carousel-track-uniamazonia {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      animation: move-carousel-uniamazonia 40s linear infinite;
+    }
+
+
+    .carousel-slide-uniamazonia {
+      flex: 0 0 100%;
+      height: 100%;
+    }
+
+
+    .carousel-slide-uniamazonia img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    @keyframes move-carousel-uniamazonia {
+      0% {
+        transform: translateX(0);
+      }
+
+      14.28% {
+        transform: translateX(0);
+      }
+
+      14.29% {
+        transform: translateX(-100%);
+      }
+
+      28.56% {
+        transform: translateX(-100%);
+      }
+
+      28.57% {
+        transform: translateX(-200%);
+      }
+
+      42.84% {
+        transform: translateX(-200%);
+      }
+
+      42.85% {
+        transform: translateX(-300%);
+      }
+
+      57.12% {
+        transform: translateX(-300%);
+      }
+
+      57.13% {
+        transform: translateX(-400%);
+      }
+
+      71.4% {
+        transform: translateX(-400%);
+      }
+
+      71.41% {
+        transform: translateX(-500%);
+      }
+
+      85.68% {
+        transform: translateX(-500%);
+      }
+
+      85.69% {
+        transform: translateX(-600%);
+      }
+
+      100% {
+        transform: translateX(-600%);
+      }
+    }
+
+    .carrusel {
+      overflow: hidden;
+      width: 100%;
+
+      height: auto;
+      position: relative;
+    }
+
+    .carrusel-track {
+      display: flex;
+      width: calc(200%);
+      animation: scrollCarrusel 16s linear infinite;
+    }
+
+    .carrusel-izquierda .carrusel-track {
+      animation: scrollIzquierda 29s linear infinite;
+    }
+
+
+    .carrusel-derecha .carrusel-track {
+      animation: scrollDerecha 29s linear infinite;
+    }
+
+    .carrusel-item {
+    flex: 0 0 calc(100% / 22);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .carrusel-item {
+        flex: 0 0 calc(100% / 8);
+    }
+}
+
+
+
+    .carrusel-item img {
+      width: auto;
+      height: 50px;
+      object-fit: cover;
+    }
+
+
+    @keyframes scrollIzquierda {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+
+    @keyframes scrollDerecha {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="flex w-full h-full flex-col gap-1">
+  <a href="#">
+    <img class="h-20 w-auto" src="./img/LogoSuperior.jpg" alt="Logo Uniamazonia">
+  </a>
+  <header class="w-full bg-white shadow">
+    <div class=" w-full px-4 flex justify-end lg:justify-between items-center h-12 lg:h-24">
+      <!-- Logo -->
+
+  
+      <!-- Botón hamburguesa (móvil) -->
+      <button id="menu-btn" class="lg:hidden block text-green-700 focus:outline-none">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+  
+      <!-- Menú grande desktop con flex-wrap -->
+      <nav class="hidden lg:flex flex-wrap w-full justify-start gap-x-4 gap-y-2">
+
+        <a href="#" class="py-2 px-3 text-sm font-semibold text-gray-900 hover:text-green-700">INICIO</a>
+        <div class="relative group">
+          <button class="py-2 px-3 text-sm font-semibold flex items-center gap-2">
+              LA UNIVERSIDAD
+              <svg class="w-4 h-4" fill="currentColor">
+                  <path d="M5 8l5 5 5-5H5z"></path>
+              </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-1 w-48 z-10">
+              <div class="block px-4 py-2 hover:bg-gray-100">Historia</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Misión y Visión</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Autoridades</div>
+          </div>
+      </div>
+      
+      <div class="relative group">
+          <button class="py-2 px-3 text-sm font-semibold flex items-center gap-2">
+              PROGRAMAS
+              <svg class="w-4 h-4" fill="currentColor">
+                  <path d="M5 8l5 5 5-5H5z"></path>
+              </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-1 w-48 z-10">
+              <div class="block px-4 py-2 hover:bg-gray-100">Pregrado</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Posgrado</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Educación Continua</div>
+          </div>
+      </div>
+      
+      <div class="relative group">
+          <button class="py-2 px-3 text-sm font-semibold flex items-center gap-2">
+              GESTIÓN
+              <svg class="w-4 h-4" fill="currentColor">
+                  <path d="M5 8l5 5 5-5H5z"></path>
+              </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-1 w-48 z-10">
+              <div class="block px-4 py-2 hover:bg-gray-100">Gestión Académica</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Gestión Administrativa</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Gestión Financiera</div>
+          </div>
+      </div>
+      
+      <div class="relative group">
+          <button class="py-2 px-3 text-sm font-semibold flex items-center gap-2">
+              SERVICIOS
+              <svg class="w-4 h-4" fill="currentColor">
+                  <path d="M5 8l5 5 5-5H5z"></path>
+              </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-1 w-48 z-10">
+              <div class="block px-4 py-2 hover:bg-gray-100">Biblioteca</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Bienestar Universitario</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Campus Virtual</div>
+          </div>
+      </div>
+      
+      <div class="relative group">
+          <button class="py-2 px-3 text-sm font-semibold flex items-center gap-2">
+              CONVOCATORIAS
+              <svg class="w-4 h-4" fill="currentColor">
+                  <path d="M5 8l5 5 5-5H5z"></path>
+              </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-1 w-48 z-10">
+              <div class="block px-4 py-2 hover:bg-gray-100">Convocatorias Docentes</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Convocatorias Estudiantes</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Convocatorias Investigación</div>
+          </div>
+      </div>
+      
+      <div class="relative group">
+          <button class="py-2 px-3 text-sm font-semibold flex items-center gap-2">
+              INVESTIGACIÓN
+              <svg class="w-4 h-4" fill="currentColor">
+                  <path d="M5 8l5 5 5-5H5z"></path>
+              </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-1 w-48 z-10">
+              <div class="block px-4 py-2 hover:bg-gray-100">Grupos de Investigación</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Proyectos</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Publicaciones</div>
+          </div>
+      </div>
+      
+      <div class="relative group">
+          <button class="py-2 px-3 text-sm font-semibold flex items-center gap-2">
+              SEDES
+              <svg class="w-4 h-4" fill="currentColor">
+                  <path d="M5 8l5 5 5-5H5z"></path>
+              </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-1 w-48 z-10">
+              <div class="block px-4 py-2 hover:bg-gray-100">Sede Principal</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Sedes Regionales</div>
+          </div>
+      </div>
+      
+      <div class="relative group">
+          <button class="py-2 px-3 text-sm font-semibold flex items-center gap-2">
+              TRANSPARENCIA
+              <svg class="w-4 h-4" fill="currentColor">
+                  <path d="M5 8l5 5 5-5H5z"></path>
+              </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-1 w-48 z-10">
+              <div class="block px-4 py-2 hover:bg-gray-100">Normatividad</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Informes de Gestión</div>
+              <div class="block px-4 py-2 hover:bg-gray-100">Rendición de Cuentas</div>
+          </div>
+      </div>
+      
+      </nav>
+  
+      <!-- Menú mobile (hamburguesa) -->
+      <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-white shadow-md z-20">
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">INICIO</a>
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">LA UNIVERSIDAD</a>
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">PROGRAMAS</a>
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">GESTIÓN</a>
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">SERVICIOS</a>
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">CONVOCATORIAS</a>
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">INVESTIGACIÓN</a>
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">SEDES</a>
+        <a href="#" class="block py-3 px-4 border-b hover:bg-gray-100">TRANSPARENCIA</a>
+      </div>
+    </div>
+  </header>
+  
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    // Mostrar/Ocultar menú al hacer clic en el botón
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  
+    // Cerrar menú al hacer clic en cualquier link del menú
+    const menuLinks = mobileMenu.querySelectorAll('a, summary');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+  
+  
+  <div class="carousel-uniamazonia w-full h-auto mt-1 overflow-hidden relative">
+    <div class="carousel-track-uniamazonia">
+      <div class="carousel-slide-uniamazonia">
+        <img src="https://www.uniamazonia.edu.co/inicio/images/banners/2025/Mega/Revista%20FAGROPEC.jpg"
+          alt="Revista FAGROPEC">
+      </div>
+      <div class="carousel-slide-uniamazonia">
+        <img src="https://www.uniamazonia.edu.co/inicio/images/banners/2025/Mega/Feria%20Emprendimiento.jpg"
+          alt="Feria Emprendimiento">
+      </div>
+      <div class="carousel-slide-uniamazonia">
+        <img src="https://www.uniamazonia.edu.co/inicio/images/banners/2025/Mega/ACOFACIEN%20-%20Megabanner.jpg"
+          alt="ACOFACIEN">
+      </div>
+      <div class="carousel-slide-uniamazonia">
+        <img
+          src="https://www.uniamazonia.edu.co/inicio/images/banners/2025/Mega/Megabanner%20Visita%20Micrositio%20Acreditacion.jpg"
+          alt="Acreditación">
+      </div>
+      <div class="carousel-slide-uniamazonia">
+        <img
+          src="https://www.uniamazonia.edu.co/inicio/images/banners/2024/Actualizaci%C3%B3n/Banner/Programas/Ing%20istemas.jpg"
+          alt="Ingeniería de Sistemas">
+      </div>
+      <div class="carousel-slide-uniamazonia">
+        <img src="https://www.uniamazonia.edu.co/inicio/images/banners/2025/Mega/Unidad%20de%20Emprendimiento%20(2).png"
+          alt="Unidad Emprendimiento">
+      </div>
+      <div class="carousel-slide-uniamazonia">
+        <img src="https://www.uniamazonia.edu.co/inicio/images/banners/2024/Portada%20megabanner.jpg" alt="Portada">
+      </div>
+    </div>
+  </div>
+  <div class="w-full flex flex-wrap justify-center gap-1">
+    <div class="group flex flex-col items-center justify-center bg-[#0B750E] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/how_to_reg_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">Inscripciones</a>
+    </div>
+    <div class="group flex flex-col items-center justify-center bg-[#E81312] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/assignment_ind_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">Aspirantes</a>
+    </div>
+    <div class="group flex flex-col items-center justify-center bg-[#E47113] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/account_circle_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">Estudiantes</a>
+    </div>
+    <div class="group flex flex-col items-center justify-center bg-[#0B750E] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/bookmark_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">Graduados</a>
+    </div>
+    <div class="group flex flex-col items-center justify-center bg-[#E81312] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/event_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">Calendario</a>
+    </div>
+    <div class="group flex flex-col items-center justify-center bg-[#E47113] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/fact_check_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">Catálogo OPAC</a>
+    </div>
+    <div class="group flex flex-col items-center justify-center bg-[#0B750E] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/question_answer_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">PQRS-D</a>
+    </div>
+    <div class="group flex flex-col items-center justify-center bg-[#E81312] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/pan_tool_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">Participa</a>
+    </div>
+    <div class="group flex flex-col items-center justify-center bg-[#E47113] w-[100px] h-[90px] md:w-[140px] md:h-[120px] p-2 transition-transform duration-300 hover:scale-105">
+        <img class="w-8 md:w-12 transition-transform duration-300 group-hover:scale-110" src="./img/work_24dp_EFEFEF.png" alt="">
+        <a class="text-white text-[10px] md:text-sm font-bold text-center mt-1">Contratación</a>
+    </div>
+</div>
+
+<section class="w-full py-10 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">ÚLTIMAS NOTICIAS</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="bg-white rounded-lg shadow overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-lg">
+        <img class="w-full h-40 object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWmPX97m6XsJMF7D-kH3F0RAD-H7DD5kZKEQ&s" alt="Noticia 1">
+        <div class="p-4">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">NATACIÓN UNIAMAZONIA</h3>
+          <p class="text-gray-600 text-sm mb-4">¡Nada hacia tus metas! Consulta los horarios de entrenamiento de natación...</p>
+          <a href="#" class="text-green-600 font-semibold hover:underline">Leer más</a>
+        </div>
+      </div>
+
+    
+      <div class="bg-white rounded-lg shadow overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-lg">
+        <img class="w-full h-40 object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ_VGOUmkHJKGJpaNlBVtmdQ7gpRyjCL_CFkuOXX38TgAYWWQZuBsycujTjvW8jIsuDx0&usqp=CAU" alt="Noticia 2">
+        <div class="p-4">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">DÍA MUNDIAL DEL RECICLAJE</h3>
+          <p class="text-gray-600 text-sm mb-4">Un llamado global a la acción por un planeta más sostenible...</p>
+          <a href="#" class="text-green-600 font-semibold hover:underline">Leer más</a>
+        </div>
+      </div>
+
+      
+      <div class="bg-white rounded-lg shadow overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-lg">
+        <img class="w-full h-40 object-cover" src="https://marandua.com.co/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-21-at-7.34.14-AM-e1679402927692.jpeg" alt="Noticia 3">
+        <div class="p-4">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">MOVILIDAD INTERNACIONAL</h3>
+          <p class="text-gray-600 text-sm mb-4">La Universidad de la Amazonia destaca la experiencia de estudiantes...</p>
+          <a href="#" class="text-green-600 font-semibold hover:underline">Leer más</a>
+        </div>
+      </div>
+
+    
+      <div class="bg-white rounded-lg shadow overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-lg">
+        <img class="w-full h-40 object-cover" src="https://www.mineducacion.gov.co/1780/articles-371720_recurso_1.jpg" alt="Noticia 4">
+        <div class="p-4">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">FÚTBOL UNIAMAZONIA</h3>
+          <p class="text-gray-600 text-sm mb-4">¡Vive tu pasión por el fútbol! Consulta los horarios de entrenamiento...</p>
+          <a href="#" class="text-green-600 font-semibold hover:underline">Leer más</a>
+        </div>
+      </div>
+
+      
+      <div class="bg-white rounded-lg shadow overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-lg">
+        <img class="w-full h-40 object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Uniamazonia_Florencia.jpg/250px-Uniamazonia_Florencia.jpg" alt="Noticia 5">
+        <div class="p-4">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">CARRERA DE LA MUJER</h3>
+          <p class="text-gray-600 text-sm mb-4">Corre por la igualdad y el poder femenino, una iniciativa inclusiva...</p>
+          <a href="#" class="text-green-600 font-semibold hover:underline">Leer más</a>
+        </div>
+      </div>
+
+     
+      <div class="bg-white rounded-lg shadow overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-lg">
+        <img class="w-full h-40 object-cover" src="https://marandua.com.co/wp-content/uploads/2020/12/UNIVERSIDAD-DE-LA-AMAZON%C3%8DA.jpg" alt="Noticia 6">
+        <div class="p-4">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">JORNADA DE SALUD</h3>
+          <p class="text-gray-600 text-sm mb-4">¡Cuidar de ti es nuestra prioridad! Te invitamos a la Jornada de Salud...</p>
+          <a href="#" class="text-green-600 font-semibold hover:underline">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mt-8 mb-8 bg-gray-100 py-5 gap-6 text-center text-gray-700">
+  <div class="flex flex-col items-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/2503/2503194.png" alt="Estudiantes" class="w-12 h-12 mb-2">
+      <p class="text-xl font-bold text-yellow-600">21170</p>
+      <p class="text-sm">Estudiantes</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Profesores" class="w-12 h-12 mb-2">
+      <p class="text-xl font-bold text-yellow-600">3414</p>
+      <p class="text-sm">Profesores</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048943.png" alt="Carreras" class="w-12 h-12 mb-2">
+      <p class="text-xl font-bold text-yellow-600">48</p>
+      <p class="text-sm">Carreras</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/1940/1940922.png" alt="Maestrías" class="w-12 h-12 mb-2">
+      <p class="text-xl font-bold text-yellow-600">77</p>
+      <p class="text-sm">Maestrías</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/2944/2944526.png" alt="Especializaciones" class="w-12 h-12 mb-2">
+      <p class="text-xl font-bold text-yellow-600">99</p>
+      <p class="text-sm">Especializaciones</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/2174/2174195.png" alt="Doctorados" class="w-12 h-12 mb-2">
+      <p class="text-xl font-bold text-yellow-600">13</p>
+      <p class="text-sm">Doctorados</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/1827/1827957.png" alt="Diplomados y cursos" class="w-12 h-12 mb-2">
+      <p class="text-xl font-bold text-yellow-600">+600</p>
+      <p class="text-sm">Diplomados y cursos</p>
+  </div>
+</div>
+
+
+
+  <div class="carrusel carrusel-derecha mt-1">
+    <div class="carrusel-track">
+      <div class="carrusel-item "><img src="./img/AgenciapublicaEmpleo.png" alt="Slide 1"></div>
+      <div class="carrusel-item  "><img src="./img/Certificado_IQNET_Internacional.png" alt="Slide 2"></div>
+      <div class="carrusel-item "><img src="./img/Certificado_ISO_9001.png" alt="Slide 3"></div>
+      <div class="carrusel-item "><img src="./img/gov_co.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/ISO 21001.png" alt="Slide 1"></div>
+      <div class="carrusel-item "><img src="./img/icetex(1).png" alt="Slide 2"></div>
+      <div class="carrusel-item "><img src="./img/minciencias.jpg" alt="Slide 3"></div>
+      <div class="carrusel-item "><img src="./img/logoURNA.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/Marca_pais.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/logoPROCURA.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/logoOBS.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/LogoFODESEP.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/LogoFODESEP.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/AgenciapublicaEmpleo.png" alt="Slide 1"></div>
+      <div class="carrusel-item  "><img src="./img/Certificado_IQNET_Internacional.png" alt="Slide 2"></div>
+      <div class="carrusel-item "><img src="./img/Certificado_ISO_9001.png" alt="Slide 3"></div>
+      <div class="carrusel-item "><img src="./img/gov_co.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/ISO 21001.png" alt="Slide 1"></div>
+      <div class="carrusel-item "><img src="./img/icetex(1).png" alt="Slide 2"></div>
+      <div class="carrusel-item "><img src="./img/minciencias.jpg" alt="Slide 3"></div>
+      <div class="carrusel-item "><img src="./img/logoURNA.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/Marca_pais.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/logoPROCURA.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/logoOBS.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/LogoFODESEP.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/LogoFODESEP.png" alt="Slide 4"></div>
+    </div>
+  </div>
+
+  <div class="carrusel mt-6 carrusel-izquierda">
+    <div class="carrusel-track">
+      <div class="carrusel-item "><img src="./img/AgenciapublicaEmpleo.png" alt="Slide 1"></div>
+      <div class="carrusel-item  "><img src="./img/Certificado_IQNET_Internacional.png" alt="Slide 2"></div>
+      <div class="carrusel-item "><img src="./img/Certificado_ISO_9001.png" alt="Slide 3"></div>
+      <div class="carrusel-item "><img src="./img/gov_co.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/ISO 21001.png" alt="Slide 1"></div>
+      <div class="carrusel-item "><img src="./img/icetex(1).png" alt="Slide 2"></div>
+      <div class="carrusel-item "><img src="./img/minciencias.jpg" alt="Slide 3"></div>
+      <div class="carrusel-item "><img src="./img/logoURNA.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/Marca_pais.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/logoPROCURA.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/logoOBS.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/LogoFODESEP.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/LogoFODESEP.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/AgenciapublicaEmpleo.png" alt="Slide 1"></div>
+      <div class="carrusel-item  "><img src="./img/Certificado_IQNET_Internacional.png" alt="Slide 2"></div>
+      <div class="carrusel-item "><img src="./img/Certificado_ISO_9001.png" alt="Slide 3"></div>
+      <div class="carrusel-item "><img src="./img/gov_co.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/ISO 21001.png" alt="Slide 1"></div>
+      <div class="carrusel-item "><img src="./img/icetex(1).png" alt="Slide 2"></div>
+      <div class="carrusel-item "><img src="./img/minciencias.jpg" alt="Slide 3"></div>
+      <div class="carrusel-item "><img src="./img/logoURNA.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/Marca_pais.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/logoPROCURA.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/logoOBS.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/LogoFODESEP.png" alt="Slide 4"></div>
+      <div class="carrusel-item "><img src="./img/LogoFODESEP.png" alt="Slide 4"></div>
+    </div>
+  </div>
+  
+
+
+
+  <footer class="relative text-green-700 py-6 ">
+
+    <div class="absolute inset-0 bg-[url('./img/amazonia.jpg')] bg-cover bg-center mt-5 opacity-50"></div>
+    <div class="relative container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 ">
+        <div>
+          <h3 class="font-bold text-red-700">Atención al ciudadano</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#">PQRS-D</a></li>
+            <li><a href="#">Glosario</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Trámites Uniamazonia</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Política Editorial</a></li>
+            <li><a href="#">Mapa del Sitio</a></li>
+            <li><a href="#">Notificaciones por Aviso</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-red-700">Aplicaciones Web</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#">Inscripciones <span class="text-xs">(Pregrado y Posgrado)</span></a></li>
+            <li><a href="#">Liquidación</a></li>
+            <li><a href="#">Catálogo en Línea (OPAC)</a></li>
+            <li><a href="#">SIGEPI</a></li>
+          </ul>
+
+          <h3 class="font-bold text-red-700 mt-4">Descubre la Universidad</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#">Marco Jurídico</a></li>
+            <li><a href="#">Rendición de Cuentas</a></li>
+            <li><a href="#">Plan de Desarrollo PDI</a></li>
+            <li><a href="#">Transparencia y Acceso a la Información</a></li>
+            <li><a href="#">Participa</a></li>
+            <li><a href="#">Portal para niños</a></li>
+            <li><a href="#">Ofertas de Empleo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-red-700">Información institucional</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#">Estatuto General</a></li>
+            <li><a href="#">Estatuto Docente</a></li>
+            <li><a href="#">Estatuto Estudiantil</a></li>
+            <li><a href="#">Estatuto de Contratación</a></li>
+            <li><a href="#">Estatuto de Biblioteca</a></li>
+            <li><a href="#">Estatuto del Investigador</a></li>
+            <li><a href="#">Estatuto Electoral</a></li>
+            <li><a href="#">Estatuto Presupuestal</a></li>
+            <li><a href="#">Estatuto de Posgrados</a></li>
+            <li><a href="#">Políticas de Bienestar Universitario</a></li>
+          </ul>
+
+          <h3 class="font-bold text-red-700 mt-4">Programas</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#">Pregrados</a></li>
+            <li><a href="#">Posgrados</a></li>
+            <li><a href="#">Educación Continuada</a></li>
+            <li><a href="#">Calendario Académico</a></li>
+            <li><a href="#">Admisiones y Registro</a></li>
+            <li><a href="#">Tarifas / Derechos Pecuniarios</a></li>
+            <li><a href="#">Instructivo - Procesos Académicos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-red-700">Servicios</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#">Consultorio Jurídico y Centro de Conciliación Virtual</a></li>
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Editorial Uniamazonia</a></li>
+            <li><a href="#">Consultorio Contable Tributario</a></li>
+            <li><a href="#">Núcleos de Apoyo Contable y Fiscal (NAF)</a></li>
+            <li><a href="#">Consultorio Jurídico</a></li>
+            <li><a href="#">Centro de Conciliación</a></li>
+            <li><a href="#">Centro de Idiomas</a></li>
+            <li><a href="#">Unidad de Emprendimiento</a></li>
+            <li><a href="#">Proveedores</a></li>
+          </ul>
+
+          <h3 class="font-bold text-red-700 mt-4">Dónde estamos</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#">Programas en otras ciudades</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <footer class="bg-white text-center text-gray-700 text-sm py-6">
+    <div class="container mx-auto px-4">
+      <p class="mb-2">
+        Copyright © 2022 uniamazonia.edu.co. Todos los derechos reservados. |
+        <a href="#" class="underline">Política de Privacidad</a>
+      </p>
+      <p class="mb-2">
+        Sede Porvenir Calle 17 Diagonal 17 con Carrera 3F - Barrio Porvenir
+      </p>
+      <p class="mb-2">
+        Atención Público: Lunes a Viernes de 7:30 a.m. a 11:30 a.m. y 1:30 p.m. a 5:30 p.m.
+      </p>
+      <p class="mb-2">
+        Contacto: <a href="mailto:atencionalciudadano@uniamazonia.edu.co"
+          class="underline">atencionalciudadano@uniamazonia.edu.co</a> -
+        Contenidos web: <a href="mailto:webmaster@uniamazonia.edu.co" class="underline">webmaster@uniamazonia.edu.co</a>
+      </p>
+      <p class="mb-2">
+        Notificaciones judiciales: <a href="mailto:njudiciales@uniamazonia.edu.co"
+          class="underline">njudiciales@uniamazonia.edu.co</a>
+      </p>
+      <p class="font-bold mt-4">
+        Vigilada Ministerio de Educación
+      </p>
+      <p class="mb-2">
+        Florencia, Caquetá, Colombia, Suramérica
+      </p>
+      <p class="mb-4">
+        Visitas: Hoy 0 | Este mes 0 | 38994
+      </p>
+
+
+      <div class="flex flex-wrap justify-center gap-4 text-xs">
+        <a href="#" class="underline">Aula Extendida</a>
+        <a href="#" class="underline">Ingreso a Campus Virtual</a>
+        <a href="#" class="underline">Ingreso al correo</a>
+        <a href="#" class="underline">Ingreso a Chairá</a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
